@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>基于 Web 开发的在线实验仿真平台</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #0072c6;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+}
+
+h1 {
+  font-size: 44px;
+  padding: 20px 0;
+  text-align: center;
+  text-shadow: 3px 3px 1px black;
+  margin: 10px 0;
+}
+
+
+h4 {
+  margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: normal;
+    text-shadow: 3px 3px 1px black;
+}
+
+form {
+    background-color: white;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-top: 50px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+}
+.button {
+  display: inline-block;
+  margin: 0;
+  padding: 0.5em 1em;
+  border-radius: 0.25em;
+  background-color: #0072c6;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #00549e;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    border: 2px solid #e5e5e5;
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #0072c6;
+}
+
+/*button[type="submit"] {
+    background-color: #0072c6;
+    color: white;
+    font-size: 18px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background-color: #00549e;
+    transform: translateY(-2px);
+}*/
+
+@media screen and (max-width: 480px) {
+    form {
+        padding: 20px;
+    }
+}
+a.button {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+</head>
+<body>
+<header>
+<h1>基于 Web 开发的在线实验仿真平台</h1>
+<h4>2023 CUPEC 教学资源开发</h4>
+</header>
+<form id="login_form" method="post" action="/login">
+<label for="account">账号：</label>
+<input
+type="text"
+id="account"
+name="account"
+placeholder="请输入账号"
+required
+/>
+<label for="password">密码：</label>
+<input
+type="password"
+id="password"
+name="password"
+placeholder="请输入密码"
+required
+/>
+<a href="./menu.html" class="button">登录</a>
+</form>
+</body>
+</html>

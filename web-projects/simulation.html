@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>仿真计算页面</title>
+	<style type="text/css">
+		/* 设置页面的样式 */
+		
+		body {
+			background-color: #f7f7f7;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			line-height: 1.5;
+			margin: 0;
+			padding: 0;
+		}
+		
+		h1 {
+			font-size: 24px;
+			margin: 10px;
+			text-align: center;
+		}
+		
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 20px auto;
+			max-width: 1000px;
+			padding: 20px;
+		}
+		
+		.left {
+			flex: 1;
+			margin-right: 20px;
+			min-width: 200px;
+		}
+		
+		.right {
+			flex: 2;
+			min-width: 400px;
+		}
+		
+		/* 设置表格的样式 */
+		
+		table {
+			border-collapse: collapse;
+			margin-top: 20px;
+			width: 100%;
+		}
+		
+		th, td {
+			border: 1px solid #ccc;
+			padding: 5px;
+			text-align: left;
+		}
+		
+		th {
+			background-color: #eee;
+			font-weight: normal;
+		}
+		
+		/* 设置canvas的样式 */
+		
+		canvas {
+			background-color: #fff;
+			border: 1px solid #ccc;
+			display: block;
+			margin: 20px auto;
+			max-width: 100%;
+		}
+        .top-link{
+        position:absolute;
+        top:0;
+        right:0;
+        margin:5px;
+        color:#0072c6;
+        text-decoration:none;
+        font-size:16px;
+      }
+      .bottom-link{
+        position:absolute;
+        bottom:0;
+        right:0;
+        margin:5px;
+        color:#0072c6;
+        text-decoration:none;
+        font-size:16px;
+      }
+	  /* 设置页面的样式 */
+body {
+  background-color: #f1f1f1;
+}
+
+h1 {
+  text-align: center;
+  color: #555;
+  margin-top: 30px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.left,
+.right {
+  width: 45%;
+  min-width: 250px;
+}
+
+.left {
+  margin-right: 30px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="number"] {
+  width: 100%;
+  margin: 5px 0px 15px;
+  height: 35px;
+  font-size: 16px;
+  padding-left: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  transition: border 0.3s ease-in-out;
+}
+
+button[type="button"] {
+  background-color: #0072c6;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 15px 30px;
+  font-size: 18px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button[type="button"]:hover {
+  background-color: #005ca9;
+}
+
+canvas {
+  max-width: 100%;
+  border-radius: 5px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+table {
+  margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+thead tr th {
+  background-color: #0072c6;
+  color: #fff;
+  font-weight: bold;
+}
+
+.bottom-link, .top-link {
+  position: fixed;
+  right: 30px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background-color: #0072c6;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.bottom-link:hover, .top-link:hover {
+  background-color: #005ca9;
+}
+
+	</style>
+</head>
+<body>
+    <a href="./menu.html" class="top-link" id="link1">Back</a>
+    <a href="./analyse.html" class="bottom-link" id="link2">Next</a>
+	<h1>仿真计算页面</h1>
+	<div class="container">
+		<div class="left">
+			<label for="param1">参数1：</label>
+			<input type="number" id="param1" name="param1"><br>
+			<label for="param2">参数2：</label>
+			<input type="number" id="param2" name="param2"><br>
+			<button type="button" onclick="calculate()">开始仿真</button>
+		</div>
+		<div class="right">
+			<canvas id="canvas" width="300" height="300"></canvas>
+			<table id="results">
+				<thead>
+					<tr>
+						<th>参数名称</th>
+						<th>参数值</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<script type="text/javascript" src="./snowflake.js">
+		
+	</script>
+</body>
+</html>

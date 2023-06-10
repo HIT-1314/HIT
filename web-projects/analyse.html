@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>网页设计</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+font-size: 16px;
+line-height: 1.5;
+margin: 0;
+padding: 0;
+}
+
+  .container {
+    display: flex;
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .left {
+    flex: 1;
+    margin-right: 20px;
+  }
+
+  .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .right-top {
+    flex: 1;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .right-bottom {
+    flex: 1;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th,
+  td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+  .top-link{
+        position:absolute;
+        top:0;
+        right:0;
+        margin:5px;
+        color:#0072c6;
+        text-decoration:none;
+        font-size:16px;
+      }
+      .bottom-link{
+        position:absolute;
+        bottom:0;
+        right:0;
+        margin:5px;
+        color:#0072c6;
+        text-decoration:none;
+        font-size:16px;
+      }
+</style>
+</head>
+<body>
+  <a href="./simulation.html" class="top-link" id="link1">Back</a>
+  <div class="container">
+    <div class="left">
+    <table>
+      <thead>
+         <tr>
+         <th>仿真数据</th>
+         </tr>
+      </thead>
+      <tbody>
+          <tr>
+          <td><input type="number" name="data"></td>
+          </tr>
+      </tbody>
+    </table>
+      <table>
+      <thead>
+      <tr>
+      <th>实验数据</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td><input type="number" name="data1"></td>
+      </tr>
+      </tbody>
+      </table>
+  </div>
+  <div class="right">
+  <div class="right-top">
+  <p>文本内容</p>
+  </div>
+  <div class="right-bottom">
+  <table>
+  <thead>
+  <tr>
+  <th>误差分析结果</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td>内容</td>
+  </tr>
+  </tbody>
+  </table>
+  </div>
+  </div>
+  </div>
+</body>
+</html>

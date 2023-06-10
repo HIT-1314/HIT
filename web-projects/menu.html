@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>按钮展示页面</title>
+    <style>
+      body{
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+        font-family: Arial, sans-serif;
+      }
+      .container{
+        display: flex;
+        height: 100vh;
+      }
+      .left-side{
+        width: 20%;
+        background-color: #0072c6;
+        color: #fff;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .left-side button{
+        background-color: white;
+        color: #0072c6;
+        border: none;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: all 0.3s ease-in-out;
+      }
+      .left-side button:hover{
+        background-color: #0072c6;
+        color: white;
+        transform: scale(1.05);
+      }
+      .right-side{
+        width: 80%;
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        position: relative; /* 增加相对定位 */
+      }
+
+      .top-link{
+        position:absolute;
+        top:0;
+        right:0;
+        margin:5px;
+        color:#0072c6;
+        text-decoration:none;
+        font-size:16px;
+      }
+      .bottom-link{
+        position:absolute;
+        bottom:0;
+        right:0;
+        margin:5px;
+        color:#0072c6;
+        text-decoration:none;
+        font-size:16px;
+      }
+      .button {
+  display: inline-block;
+  margin: 0;
+  padding: 0.5em 1em;
+  border-radius: 0.25em;
+  background-color: #0072c6;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #00549e;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-side">
+        <button id="btn1">按钮1</button>
+        <button id="btn2">按钮2</button>
+        <button id="btn3">按钮3</button>
+        <button id="btn4">按钮4</button>
+        <button id="btn5">按钮5</button>
+      </div>
+      <div class="right-side" id="content-display">
+        请选择一个按钮
+      </div>
+    </div>
+    <a href="./login.html" class="top-link" id="link1">Back</a>
+    <a href="#" class="bottom-link" id="link2">Next</a>
+    <script>
+      // 获取按钮元素
+      let btn1 = document.getElementById("btn1");
+      let btn2 = document.getElementById("btn2");
+      let btn3 = document.getElementById("btn3");
+      let btn4 = document.getElementById("btn4");
+      let btn5 = document.getElementById("btn5");
+
+      // 获取展示框元素
+      let display = document.getElementById("content-display");
+       // 获取链接元素
+      let link1 = document.getElementById("link1");
+      let link2 = document.getElementById("link2");
+
+        // 每次点击左边按钮时，修改右边的内容
+        btn1.onclick = function(){
+        display.innerHTML = "这是按钮1的内容";
+        link2.href = "https://www.baidu.com"; // 修改为相应的链接地址
+        }
+        btn2.onclick = function(){
+        display.innerHTML = "这是按钮2的内容";
+        link2.href = "http://www.huya.com"; // 修改为相应的链接地址
+        }
+        btn3.onclick = function(){
+        display.innerHTML = "这是按钮3的内容";
+        link2.href = "./simulation.html"; // 修改为相应的链接地址
+        }
+        btn4.onclick = function(){
+        display.innerHTML = "这是按钮4的内容";
+        link2.href = "#"; // 修改为相应的链接地址
+        }
+        btn5.onclick = function(){
+        display.innerHTML = "这是按钮5的内容";
+        link2.href = "#"; // 修改为相应的链接地址
+        }
+
+
+
+    </script>
+  </body>
+</html>
